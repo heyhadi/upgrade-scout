@@ -4,7 +4,10 @@
   "description": "See which dependencies are a major behind and what will break when you upgrade them.",
   "license": "MIT",
   "author": "Munawirul Hadi",
-  "repository": "github:heyhadi/upgrade-scout",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyhadi/upgrade-scout.git"
+  },
   "type": "module",
   "bin": {
     "upgrade-scout": "dist/bin.js"
