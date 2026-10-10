@@ -1,0 +1,44 @@
+{
+  "name": "upgrade-scout",
+  "version": "0.1.0",
+  "description": "See which dependencies are a major behind and what will break when you upgrade them.",
+  "license": "MIT",
+  "author": "Munawirul Hadi",
+  "repository": "github:heyhadi/upgrade-scout",
+  "type": "module",
+  "bin": {
+    "upgrade-scout": "dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "upgrade",
+    "dependencies",
+    "outdated",
+    "react-18",
+    "migration",
+    "codemod"
+  ],
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "semver": "^7.8.5",
+    "ts-morph": "^28.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/semver": "^7.8.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
